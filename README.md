@@ -128,7 +128,7 @@ Agora que temos nosso ambiente Python todo configurado, podemos começar a traba
 jupyter notebook
 ```
     
-## Demo modelo PLN - Análise de sentimento 
+## Demo modelo - Pipeline workflow
 
 ```bash
   # Carregando as bibliotecas 
