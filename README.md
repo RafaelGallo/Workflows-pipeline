@@ -169,68 +169,68 @@ jupyter notebook
   y_train.shape
 
   # Modelo pipeline
-from sklearn.feature_selection import VarianceThreshold
-from sklearn.pipeline import Pipeline
+  from sklearn.feature_selection import VarianceThreshold
+  from sklearn.pipeline import Pipeline
 
-data_pipeline = Pipeline([
-    ("scaler", StandardScaler()), # Scaler : Para pré-processamento de dados, ou seja, transforme os dados em média zero e variância de unidade usando o StandardScaler ().
-    ("selector", VarianceThreshold()), # Seletor de recurso : Use VarianceThreshold () para descartar recursos cuja variação seja menor que um determinado limite definido.
-    ("classifier", KNeighborsClassifier()) # Classificador : KNeighborsClassifier (), que implementa o classificador de k-vizinho mais próximo e seleciona a classe dos k pontos principais, que estão mais próximos do exemplo de teste.
-])
-data_pipeline_fit = data_pipeline.fit(x_train, y_train)
-data_pipeline_score = data_pipeline.score(x_train, y_train)
+  data_pipeline = Pipeline([
+  ("scaler", StandardScaler()), # Scaler : Para pré-processamento de dados, ou seja, transforme os dados em média zero e variância de unidade usando o StandardScaler ().
+  ("selector", VarianceThreshold()), # Seletor de recurso : Use VarianceThreshold () para descartar recursos cuja variação seja menor que um determinado limite definido.
+  ("classifier", KNeighborsClassifier()) # Classificador : KNeighborsClassifier (), que implementa o classificador de k-vizinho mais próximo e seleciona a classe dos k pontos      principais, que estão mais próximos do exemplo de teste.
+  ])
+  data_pipeline_fit = data_pipeline.fit(x_train, y_train)
+  data_pipeline_score = data_pipeline.score(x_train, y_train)
 
-print('Treinamento base treino - Pipeline: ' + str(data_pipeline.score(x_train,y_train)))
-print('Treinamento base teste - Pipeline: ' + str(data_pipeline.score(x_test,y_test)))
+  print('Treinamento base treino - Pipeline: ' + str(data_pipeline.score(x_train,y_train)))
+  print('Treinamento base teste - Pipeline: ' + str(data_pipeline.score(x_test,y_test)))
 
-# Previsão do pipeline do modelo
-data_pipeline_pred_1 = data_pipeline.predict(x_test)
-data_pipeline_pred_1
+  # Previsão do pipeline do modelo
+  data_pipeline_pred_1 = data_pipeline.predict(x_test)
+  data_pipeline_pred_1
 
-# Accuracy do pipeline
-from sklearn.metrics import accuracy_score
-accuracy_pipeline_1 = accuracy_score(y_test, data_pipeline_pred_1)
-print("Accuracy - pipeline: %.2f" % (accuracy_pipeline_1 * 100))
+  # Accuracy do pipeline
+  from sklearn.metrics import accuracy_score
+  accuracy_pipeline_1 = accuracy_score(y_test, data_pipeline_pred_1)
+  print("Accuracy - pipeline: %.2f" % (accuracy_pipeline_1 * 100))
 
-# Confusion matrix do modelo
-from sklearn.metrics import confusion_matrix
-matrix_1 = confusion_matrix(y_test, data_pipeline_pred_1)
-plot_confusion_matrix(matrix_1, show_normed=True, colorbar=False, class_names=['SPAM', 'NAO-SPAM'])
+  # Confusion matrix do modelo
+  from sklearn.metrics import confusion_matrix
+  matrix_1 = confusion_matrix(y_test, data_pipeline_pred_1)
+  plot_confusion_matrix(matrix_1, show_normed=True, colorbar=False, class_names=['SPAM', 'NAO-SPAM'])
 
-# Curva ROC do modelo
-from sklearn.metrics import roc_curve, roc_auc_score
-roc = data_pipeline.predict_proba(x_test)[:,1]
-tfp, tvp, limite = roc_curve(y_test, roc)
-print('roc_auc', roc_auc_score(y_test, roc))
+  # Curva ROC do modelo
+  from sklearn.metrics import roc_curve, roc_auc_score
+  roc = data_pipeline.predict_proba(x_test)[:,1]
+  tfp, tvp, limite = roc_curve(y_test, roc)
+  print('roc_auc', roc_auc_score(y_test, roc))
 
-plt.subplots(1, figsize=(5,5))
-plt.title('Curva ROC')
-plt.plot(tfp,tvp)
-plt.xlabel('Especifidade')
-plt.ylabel('Sensibilidade')
-plt.plot([0, 1], ls="--", c = 'red')
-plt.plot([0, 0], [1, 0], ls="--", c = 'green'), plt.plot([1, 1], ls="--", c = 'green')
-plt.show()
+  plt.subplots(1, figsize=(5,5))
+  plt.title('Curva ROC')
+  plt.plot(tfp,tvp)
+  plt.xlabel('Especifidade')
+  plt.ylabel('Sensibilidade')
+  plt.plot([0, 1], ls="--", c = 'red')
+  plt.plot([0, 0], [1, 0], ls="--", c = 'green'), plt.plot([1, 1], ls="--", c = 'green')
+  plt.show()
 
-# Classification report do modelo
-from sklearn.metrics import classification_report
-classification = classification_report(y_test, data_pipeline_pred_1)
-print("Modelo - Pipeline 1")
-print()
-print(classification)
+  # Classification report do modelo
+  from sklearn.metrics import classification_report
+  classification = classification_report(y_test, data_pipeline_pred_1)
+  print("Modelo - Pipeline 1")
+  print()
+  print(classification)
 
-# Métricas do modelo 
-from sklearn.metrics import precision_score
-from sklearn.metrics import recall_score
-from sklearn.metrics import recall_score
-from sklearn.metrics import f1_score
+  # Métricas do modelo 
+  from sklearn.metrics import precision_score
+  from sklearn.metrics import recall_score
+  from sklearn.metrics import recall_score
+  from sklearn.metrics import f1_score
 
-precision = precision_score(y_test, data_pipeline_pred_1)
-Recall = recall_score(y_test, data_pipeline_pred_1)
-Accuracy = accuracy_score(y_test, data_pipeline_pred_1)
-F1_Score = f1_score(y_test, data_pipeline_pred_1)
+  precision = precision_score(y_test, data_pipeline_pred_1)
+  Recall = recall_score(y_test, data_pipeline_pred_1)
+  Accuracy = accuracy_score(y_test, data_pipeline_pred_1)
+  F1_Score = f1_score(y_test, data_pipeline_pred_1)
 
-precisao = pd.DataFrame({
+  precisao = pd.DataFrame({
     
     "Metricas" : ["precision",
                  "Recall", 
@@ -242,7 +242,7 @@ precisao = pd.DataFrame({
                 Accuracy, 
                 F1_Score]})
 
-precisao.sort_values(by = "Resultado", ascending = False)
+  precisao.sort_values(by = "Resultado", ascending = False)
 ```
 
 
