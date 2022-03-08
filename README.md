@@ -1,4 +1,4 @@
-# Project-machine-learning-Social-media
+# Project machine-learning - Workflows-pipeline
 
 [![MIT License](https://img.shields.io/apm/l/atomic-design-ui.svg?)](https://github.com/tterb/atomic-design-ui/blob/master/LICENSEs)
 [![GPLv3 License](https://img.shields.io/badge/License-GPL%20v3-yellow.svg)](https://opensource.org/licenses/)
@@ -25,45 +25,60 @@
 [![](https://img.shields.io/badge/Numpy-white.svg)](https://numpy.org/)
 [![](https://img.shields.io/badge/PowerBI-red.svg)](https://powerbi.microsoft.com/pt-br/)
 
-![Logo](https://image.freepik.com/vetores-gratis/ilustracao-do-conceito-de-dados-visuais_114360-1912.jpg)
+              
+![Logo](https://as1.ftcdn.net/v2/jpg/02/13/59/36/1000_F_213593664_Q7E5xrx8cKXmalLOfRFe9CY2jHvNp4f5.jpg)
 
-Projeto focado em marketing analytics e social media nesse projeto tirar resultados bom nas campanhas, receitas e análise de dados.
 
-- Aprendizados
+# Descrição do projeto
+Projeto criação de modelos de pipeline para modelo de machine learning.
 
-- O que você aprendeu construindo esse projeto? 
-- Quais desafios você enfrentou e como você superou-os?
+- Projeto Workflows - M.l
+- Neste projeto fiz um modelo de classificação emails são real e spam base de dados tem total de 5172 linhas 3002 e colunas. No dataset existe uma coluna chamado de Prediction, essa coluna a ser classificado ela está como email para spam 0 para verdadeiro real 1. Objetivo e classificar email que são spam e real. Nesse projeto está tudo documentado os passos que fiz nesse projeto.
 
-## Stack utilizada
+O que pipeline: Pipeline otimização para o modelo Machine learning para não ter overfitting no modelo.
 
-**Machine learning:** Python, R
+# Stack utilizada
+Programação Python
 
-**Framework:** Scikit-learn, Tensorflow
+Machine learning: Scikit-learn
 
-**Análise de dados:** Python
+Leitura CSV: Pandas
 
-**Dashboard:** Power BI, Google Data Studio
+Análise de dados: Seaborn, Matplotlib
 
-## Autores
+## Variáveis de Ambiente
 
-- [@RafaelGallo](https://github.com/RafaelGallo)
+Para rodar esse projeto, você vai precisar adicionar as seguintes variáveis de ambiente no seu .env
 
-## Base dados - Projeto
+Instalando a virtualenv
 
-| Projeto               | Link                                                |
-| ----------------- | ---------------------------------------------------------------- |
-| Spam email | [Link](https://github.com/RafaelGallo/Project-machine-learning---Social-media/blob/main/notebooks/ML%20SPAM/Notebook/model_spam.ipynb)|
-| Social Network Ads | [Link](https://github.com/RafaelGallo/Project-machine-learning---Social-media/blob/main/notebooks/Social%20Network%20Ads/Modelo%20machine%20learning%20-%20Previs%C3%A3o%20vendas%20rede%20social.ipynb)|
-| Social Media page Analysis | https://www.kaggle.com/salmaneunus/ttl-fb|
-| Customer Personality Analysis| https://www.kaggle.com/imakash3011/customer-personality-analysis|
-| Instagram fake spammer genuine accounts| https://www.kaggle.com/free4ever1/instagram-fake-spammer-genuine-accounts|
-| Instagram fake followers| https://www.kaggle.com/bugrayan/instagram-fake-followers|
-| Instagram fake and real accounts dataset| https://www.kaggle.com/rezaunderfit/instagram-fake-and-real-accounts-dataset/code|
-| 650.000 Instagram User Info| https://www.kaggle.com/bugrayan/650000-instagram-user-info|
-| 1100 instagram users datetime posts|https://www.kaggle.com/vasileiosmpletsos/1100-instagram-users-datetime-posts-data|
-| Pfizer Instagram| https://www.kaggle.com/rezaunderfit/what-people-are-talking-about-pfizer-on-instagram|
-| Sentimental Analysis depressed | https://www.kaggle.com/gargmanas/sentimental-analysis-for-tweets|
-| Linkedin profiles and jobs | https://www.kaggle.com/killbot/linkedin-profiles-and-jobs-data|
+`pip install virtualenv`
+
+Nova virtualenv
+
+`virtualenv nome_virtualenv`
+
+Ativando a virtualenv
+
+`source nome_virtualenv/bin/activate` (Linux ou macOS)
+
+`nome_virtualenv/Scripts/Activate` (Windows)
+
+Retorno da env
+
+`projeto_py source venv/bin/activate` 
+
+Desativando a virtualenv
+
+`(venv) deactivate` 
+
+Instalando pacotes
+
+`(venv) projeto_py pip install flask`
+
+Instalando as bibliotecas
+
+`pip freeze`
 
 ## Instalação 
 
@@ -81,6 +96,7 @@ Instalação das bibliotecas para esse projeto no python.
   scipy==1.0.0
   matplotlib==2.1.2
 ```
+
 Instalação do Python É altamente recomendável usar o anaconda para instalar o python. Clique aqui para ir para a página de download do Anaconda https://www.anaconda.com/download. Certifique-se de baixar a versão Python 3.6. Se você estiver em uma máquina Windows: Abra o executável após a conclusão do download e siga as instruções. 
 
 Assim que a instalação for concluída, abra o prompt do Anaconda no menu iniciar. Isso abrirá um terminal com o python ativado. Se você estiver em uma máquina Linux: Abra um terminal e navegue até o diretório onde o Anaconda foi baixado. 
@@ -107,36 +123,140 @@ Agora que temos nosso ambiente Python todo configurado, podemos começar a traba
 jupyter notebook
 ```
 
-## Variáveis de Ambiente
+## Demo modelo M.L
 
-Para rodar esse projeto, você vai precisar adicionar as seguintes variáveis de ambiente no seu .env
+```bash
+  # Carregando as bibliotecas 
+  import pandas as pd
+  import seaborn as sns
+  import matplotlib.pyplot as plt
 
-`API_KEY`
+  # Carregando o dataset
+  data = pd.read_csv("data.csv")
+  
+  # Visualizando os 5 primeiros itens
+  data.head()
 
-`ANOTHER_API_KEY`
+  # visualizando linhas e colunas com shape
+  data.shape
 
+  # Informações das variaveis
+  data.info()
 
-## Uso/Exemplos - Modelos machine learning
+  # Treino e teste da base de dados para x e y
+  x = df_train.iloc[:, 0: 10]
+  y = df_train.iloc[:, 10]
 
-```javascript
-import Component from 'my-project'
+  # Visualizando o shape da variavel x
+  x.shape
 
-function App() {
-  return <Component />
-}
+  # Visualizando o shape da variavel y
+  y.shape
+
+  # Treinando modelo de machine learning
+  from sklearn.model_selection import train_test_split
+  x_train, x_test, y_train, y_test = train_test_split(x, y, test_size = 0.3, random_state = 0)
+
+  # Visualizando linhas e colunas do dado de treino x_train
+  x_train.shape
+
+  # Visualizando linhas e colunas do dado de treino y_train
+  y_train.shape
+
+  # Modelo pipeline
+  from sklearn.feature_selection import VarianceThreshold
+  from sklearn.pipeline import Pipeline
+
+  data_pipeline = Pipeline([
+  ("scaler", StandardScaler()), # Scaler : Para pré-processamento de dados, ou seja, transforme os dados em média zero e variância de unidade usando o StandardScaler ().
+  ("selector", VarianceThreshold()), # Seletor de recurso : Use VarianceThreshold () para descartar recursos cuja variação seja menor que um determinado limite definido.
+  ("classifier", KNeighborsClassifier()) # Classificador : KNeighborsClassifier (), que implementa o classificador de k-vizinho mais próximo e seleciona a classe dos k pontos      principais, que estão mais próximos do exemplo de teste.
+  ])
+  data_pipeline_fit = data_pipeline.fit(x_train, y_train)
+  data_pipeline_score = data_pipeline.score(x_train, y_train)
+
+  print('Treinamento base treino - Pipeline: ' + str(data_pipeline.score(x_train,y_train)))
+  print('Treinamento base teste - Pipeline: ' + str(data_pipeline.score(x_test,y_test)))
+
+  # Previsão do pipeline do modelo
+  data_pipeline_pred_1 = data_pipeline.predict(x_test)
+  data_pipeline_pred_1
+
+  # Accuracy do pipeline
+  from sklearn.metrics import accuracy_score
+  accuracy_pipeline_1 = accuracy_score(y_test, data_pipeline_pred_1)
+  print("Accuracy - pipeline: %.2f" % (accuracy_pipeline_1 * 100))
+
+  # Confusion matrix do modelo
+  from sklearn.metrics import confusion_matrix
+  matrix_1 = confusion_matrix(y_test, data_pipeline_pred_1)
+  plot_confusion_matrix(matrix_1, show_normed=True, colorbar=False, class_names=['SPAM', 'NAO-SPAM'])
+
+  # Curva ROC do modelo
+  from sklearn.metrics import roc_curve, roc_auc_score
+  roc = data_pipeline.predict_proba(x_test)[:,1]
+  tfp, tvp, limite = roc_curve(y_test, roc)
+  print('roc_auc', roc_auc_score(y_test, roc))
+
+  plt.subplots(1, figsize=(5,5))
+  plt.title('Curva ROC')
+  plt.plot(tfp,tvp)
+  plt.xlabel('Especifidade')
+  plt.ylabel('Sensibilidade')
+  plt.plot([0, 1], ls="--", c = 'red')
+  plt.plot([0, 0], [1, 0], ls="--", c = 'green'), plt.plot([1, 1], ls="--", c = 'green')
+  plt.show()
+
+  # Classification report do modelo
+  from sklearn.metrics import classification_report
+  classification = classification_report(y_test, data_pipeline_pred_1)
+  print("Modelo - Pipeline 1")
+  print()
+  print(classification)
+
+  # Métricas do modelo 
+  from sklearn.metrics import precision_score
+  from sklearn.metrics import recall_score
+  from sklearn.metrics import recall_score
+  from sklearn.metrics import f1_score
+
+  precision = precision_score(y_test, data_pipeline_pred_1)
+  Recall = recall_score(y_test, data_pipeline_pred_1)
+  Accuracy = accuracy_score(y_test, data_pipeline_pred_1)
+  F1_Score = f1_score(y_test, data_pipeline_pred_1)
+
+  precisao = pd.DataFrame({
+    
+    "Metricas" : ["precision",
+                 "Recall", 
+                  "Accuracy", 
+                  "F1_Score"],
+    
+    "Resultado": [precision,
+                Recall, 
+                Accuracy, 
+                F1_Score]})
+
 ```
+# Melhorias
+Que melhorias você fez no seu código?
+
+Ex: refatorações, melhorias de performance, acessibilidade, etc
+
+#Suporte
+Para suporte, mande um email para rafaelhenriquegallo@gmail.com
+
+## Documentação
+
+[Documentação](https://link-da-documentação)
 
 ## Screenshots
 
 ![App Screenshot](https://via.placeholder.com/468x300?text=App+Screenshot+Here)
 
 
-## Feedback
+## Relacionados
 
-Se você tiver algum feedback, por favor nos deixe saber por meio de Rafael Gallo
+Segue alguns projetos relacionados
 
-
-## Melhorias
-
-Que melhorias você fez no seu código? Ex: refatorações, melhorias de performance, acessibilidade, etc
-
+[Awesome README](https://github.com/matiassingers/awesome-readme)
