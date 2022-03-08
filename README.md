@@ -238,6 +238,10 @@ jupyter notebook
                 F1_Score]})
 
 ```
+## Screenshots
+
+![Modelo Decision tree](![image](https://user-images.githubusercontent.com/44452165/157152932-6f8315c2-cd88-4408-825b-142c71dffecd.png)
+
 # Melhorias
 Que melhorias você fez no seu código?
 
@@ -249,10 +253,6 @@ Para suporte, mande um email para rafaelhenriquegallo@gmail.com
 ## Documentação
 
 [Documentação](https://link-da-documentação)
-
-## Screenshots
-
-![App Screenshot](https://via.placeholder.com/468x300?text=App+Screenshot+Here)
 
 
 ## Relacionados
