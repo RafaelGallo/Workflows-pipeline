@@ -1,0 +1,10 @@
+Descrição
+Modelo machine learning - Anúncios de rede social - Floresta Aleatória
+
+Contente
+Inclui idade e salário estimado do usuário. 
+A coluna comprada indica se o usuário específico com idade e salário estimado comprou o produto ou não ao visualizar os anúncios sociais do produto.
+
+Resultado
+0: não
+1: sim

@@ -1,0 +1,6 @@
+,Models,Acurácia
+4,Gradient boosting,0.8683035714285714
+2,Decision tree,0.8459821428571429
+1,Regression Logistic,0.8370535714285714
+0,K-NN,0.8191964285714286
+3,Naive bayes,0.7924107142857143
