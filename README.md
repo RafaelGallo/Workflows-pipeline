@@ -131,6 +131,7 @@ jupyter notebook
 | ----------------- | ---------------------------------------------------------------- |
 | Customer Personality Analysis |[Link](https://github.com/RafaelGallo/Workflows-pipeline/blob/main/Jupyter%20Notebook/Customer%20Personality%20Analysis/Jupyter%20notebook/pipeline_model.ipynb)|
 | SPAM |[Link](https://github.com/RafaelGallo/Workflows-pipeline/blob/main/Jupyter%20Notebook/SPAM/Workflows_pipeline_1_Classifica%C3%A7%C3%A3o.ipynb)|
+| Pulsar | [Link](https://github.com/RafaelGallo/Workflows-pipeline/blob/main/Jupyter%20Notebook/Pulsar/pipeline_01.ipynb)|
 
 
 ## Demo modelo M.L
