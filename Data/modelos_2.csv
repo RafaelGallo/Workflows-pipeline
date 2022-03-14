@@ -1,4 +1,4 @@
 ,Models,Acurácia
-2,Pipeline 3: Naive bayes,0.9342783505154639
-1,Pipeline 2: Decision tree,0.8614690721649485
-0,Pipeline 1: K-NN,0.8195876288659794
+0,Pipeline 1: K-NN,0.9737430167597766
+1,Pipeline 2: Decision tree,0.9737430167597766
+2,Pipeline 3: Naive bayes,0.9346368715083799

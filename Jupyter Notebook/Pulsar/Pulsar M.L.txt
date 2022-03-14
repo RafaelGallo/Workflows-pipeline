@@ -1,0 +1,33 @@
+- Consiste em 91.192 candidatos de pulsar coletados durante a pesquisa High Time Resolution Universe. Cada candidato de pulsar é descrito pelos seguintes 30 recursos.
+
+1 Média do perfil integrado.
+2 Desvio padrão do perfil integrado.
+3 Excesso de curtose do perfil integrado.
+4 Skewness do perfil integrado.
+5 Média da curva DM-SNR.
+6 Desvio padrão da curva DM-SNR.
+7 Excesso de curtose da curva DM-SNR.
+8 Assimetria da curva DM-SNR.
+9 Melhor período
+10 Melhor DM
+11 Melhor SNR
+12 Largura do pulso
+13 valor χ² do perfil de pulso e curva de pecado
+14 valor χ² do perfil de pulso e curva sin²
+15 valor χ² do perfil de pulso e ajuste Gaussiano
+16 Meio máximo de largura total do ajuste gaussiano
+17 χ²valor do perfil de pulso e ajuste de duas gaussianas
+18 Média de meio-máximo de largura total de ajuste de dois gaussianos
+19 Deslocamento do histograma do perfil de zero
+20 máx. (histograma do perfil) / máx. (Gaussiano ajustado)
+21 Deslocamento do recurso 19 e histograma de gradiente de perfil
+22 SNR_data / √ ((P-W_obs) / W))
+23 SNR_fit / √ ((P − W_obs) / W))
+24 abs. (DM_fit − DM_best)
+25 χ²valor de ajuste da curva DM-SNR
+26 RMS da posição dos picos em todas as sub-bandas
+27 Média dos coeficientes de correlação para todos os pares de sub-bandas
+28 Soma dos coeficientes de correlação para todos os pares de sub-bandas
+29 Número de picos no perfil de pulso 22
+30 Área sob o perfil de pulso após subtração média
+31 Classe (0 = não pulsar & 1 = pulsar)
